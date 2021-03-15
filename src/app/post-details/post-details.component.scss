@@ -1,0 +1,94 @@
+.main-container {
+  color: black;
+  background-color: #f2f2f2;
+  height: 100vh;
+
+
+  .back {
+    background-color: #f2f2f2;
+
+    a {
+      color: black;
+      text-decoration: none;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+  }
+
+  .header {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+
+    h2 {
+      font-size: 14px;
+    }
+
+    .logo {
+      padding-right: 15px;
+      height: 70px;
+    }
+  }
+
+  .postsContainer {
+    padding: 3% 0;
+
+    .post {
+
+      width: 100%;
+      border-radius: 5px;
+      background: white;
+
+      .text {
+        padding: 3%;
+
+        h3 {
+          font-size: 18px;
+          margin-top: 0;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .votes {
+        font-weight: 600;
+        color: #9a9a9a;
+        padding: 0% 0 2% 3%;
+
+        i {
+          padding-right: 5px;
+        }
+
+        i:hover {
+          color: black;
+          cursor: pointer;
+        }
+
+        .ups {
+          padding-right: 4%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main-container {
+    .header {
+      .logo {
+        margin-left: 10%;
+      }
+
+      .logo:hover {
+        cursor: pointer;
+      }
+    }
+
+    .post {
+      width: 80% !important;
+    }
+  }
+}

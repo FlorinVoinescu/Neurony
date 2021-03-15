@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="back" fxHide="true" fxShow.xs="true" fxShow.sm="true">
+    <a href="/posts" class="fas fa-arrow-left"></a></div>
+  <div class="header" fxLayout="row" fxLayoutAlign="start end" fxLayoutAlign.xs="center end">
+    <img class="logo" (click)="backToHome()" src="https://b.thumbs.redditmedia.com/UO8Hj8ZnQmYGeE9ZIjKPQEwlX46OBPC_kj2Jqlt5nqo.png" alt="">
+    <h2>/r/{{subreddit}}/{{selectedPostId}}</h2>
+  </div>
+  <div class="postsContainer" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="2%">
+    <div class="post">
+      <div class="text">
+        <h3 *ngIf="isLoading==false">{{selectedPost[0].data.title}}</h3>
+        <p *ngIf="isLoading==false">{{selectedPost[0].data.selftext}}</p>
+      </div>
+      <div class="votes" *ngIf="isLoading==false">
+        <span class="ups"><i class="fas fa-arrow-alt-circle-up"></i> {{selectedPost[0].data.ups}}</span>
+        <span class="downs"> <i class="fas fa-arrow-alt-circle-down"></i>{{selectedPost[0].data.downs}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="back" fxHide="true" fxShow.xs="true" fxShow.sm="true">
+    <a href="/search" class="fas fa-arrow-left"></a></div>
+  <div class="header" fxLayout="row" fxLayoutAlign="start end" fxLayoutAlign.xs="center end">
+    <img class="logo" (click)="backToHome()" src="https://b.thumbs.redditmedia.com/UO8Hj8ZnQmYGeE9ZIjKPQEwlX46OBPC_kj2Jqlt5nqo.png" alt="">
+    <h2>/r/{{subreddit}}</h2>
+  </div>
+  <div class="postsContainer" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="2%">
+    <div class="errorMsg" *ngIf="subredditError!=''">
+      <h2>{{subredditError}} <a href="'/search'">again.</a></h2>
+    </div>
+    <div class="post" *ngFor="let post of displayedPosts">
+      <div class="text">
+        <h3 (click)="showDetails(post)">{{post.data.title}}</h3>
+      </div>
+      <div class="votes">
+        <span class="ups"><i class="fas fa-arrow-alt-circle-up"></i> {{post.data.ups}}</span>
+        <span class="downs"> <i class="fas fa-arrow-alt-circle-down"></i>{{post.data.downs}}</span>
+      </div>
+    </div>
+  </div>
+</div>
